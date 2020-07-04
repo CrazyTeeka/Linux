@@ -12,8 +12,10 @@ rm -rf $HOME/.local/share/teamviewer*
 rm -rf $HOME/.local/share/TeamViewer*
 rm -f  $HOME/Downloads/teamviewer*.deb
 
+if [ -d "$HOME/Downloads" ]; then
 echo "Downloading TeamViewer..."
-wget -q -P $HOME/Downloads/ https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+wget -q -O $HOME/Downloads/teamviewer_amd64.deb https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+fi
 
 if [ -f "$HOME/Downloads/teamviewer_amd64.deb" ]; then
 echo "Installing TeamViewer..."
