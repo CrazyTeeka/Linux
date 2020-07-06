@@ -2,6 +2,9 @@
 
 sudo -v
 
+echo "Closing TeamViewer..."
+killall teamviewer
+
 echo "Removing TeamViewer..."
 sudo apt-get -y purge teamviewer >/dev/null 2>/dev/null
 sudo apt-get -y purge teamviewer-host >/dev/null 2>/dev/null
